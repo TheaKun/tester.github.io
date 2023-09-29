@@ -617,4 +617,31 @@ section.footer {
     right: 0;
 }
 
-/* Up */
+/* Popup */
+.blur-effect {
+    filter: blur(100px);
+    transition: filter 0.3s;
+}
+
+.pop-img img {
+    z-index: 100;
+    position: fixed;
+    width: 400px; /* Set the initial width */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    animation: resizeAnimation 0.3s ease-in-out;
+}
+
+@keyframes resizeAnimation {
+    0% {
+        width: 400px; /* Set the initial width */
+    }
+    50% {
+        width: 400px;
+    }
+    100% {
+        width: 800px; /* Set the final width */
+    }
+}
